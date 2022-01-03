@@ -1,0 +1,20 @@
+package hello.aop.member.annotation;
+
+import hello.aop.member.MemberService;
+import org.springframework.stereotype.Component;
+
+@ClassAop
+@Component
+public class MemberServiceImpl implements MemberService {
+
+
+    @Override
+    @MethodAop("test value")
+    public String hello(String name) {
+        return "ok";
+    }
+
+    public String internal(String name) {
+        return "ok";
+    }
+}
