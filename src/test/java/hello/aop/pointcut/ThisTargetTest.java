@@ -16,7 +16,7 @@ import org.springframework.context.annotation.Import;
  * spring.aop.proxy-target-class = false JDK 동적 프록시
  */
 @Slf4j
-@SpringBootTest(properties = "spring.aop.proxy-target-class = false") 
+@SpringBootTest(properties = "spring.aop.proxy-target-class = false")
 @Import(ThisTargetTest.ThisTargetAspect.class)
 public class ThisTargetTest {
 
